@@ -5,13 +5,15 @@
     "storybook": "rimraf node_modules/.cache && start-storybook -p 9001",
     "storybook:build": "rimraf node_modules/.cache && build-storybook",
     "storybook:start": "http-server -s -p 9001 storybook-static",
-    "storybook:test": "test-storybook --url http://localhost:9001 --coverage"
+    "storybook:test": "test-storybook --url http://localhost:9001 --coverage",
+    "lint": "eslint --fix ./src",
+    "lint:fix": "eslint --fix ./src"
   },
   "dependencies": {
+    "cross-fetch": "^3.1.5",
     "next": "^13.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rimraf": "^4.4.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@node-libraries/scaffold": "^1.0.0",
@@ -26,9 +28,16 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
+    "rimraf": "^4.4.0",
     "sass": "^1.59.2",
     "storybook-addon-module-mock": "^0.0.6",
     "storybook-addon-next": "^1.7.3",

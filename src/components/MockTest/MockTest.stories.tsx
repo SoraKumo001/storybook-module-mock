@@ -1,9 +1,9 @@
 import { expect } from "@storybook/jest";
-import { userEvent, waitFor, within } from "@storybook/testing-library";
-import { createMock, getMock } from "storybook-addon-module-mock";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { MockTest } from "./MockTest";
+import { userEvent, waitFor, within } from "@storybook/testing-library";
 import React from "react";
+import { createMock, getMock } from "storybook-addon-module-mock";
+import { MockTest } from "./MockTest";
 
 const meta: ComponentMeta<typeof MockTest> = {
   title: "Components/MockTest",
