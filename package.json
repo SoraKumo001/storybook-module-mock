@@ -3,7 +3,7 @@
     "test": "yarn storybook:build && npm-run-all -p -r storybook:start storybook:test",
     "sf": "scaffold create -t https://github.com/node-libraries/scaffold/tree/master/templates/storybook6",
     "storybook": "rimraf node_modules/.cache && start-storybook -p 9001",
-    "storybook:build": "build-storybook",
+    "storybook:build": "rimraf node_modules/.cache && build-storybook",
     "storybook:start": "http-server -s -p 9001 storybook-static",
     "storybook:test": "test-storybook --url http://localhost:9001 --coverage"
   },
