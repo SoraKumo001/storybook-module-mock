@@ -1,28 +1,28 @@
 import { expect } from "@storybook/jest";
 import { userEvent, waitFor, within } from "@storybook/testing-library";
-import { createMock, getMock } from "storybook-addon-module-mock";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import { MockTest } from "./MockTest";
-import React from "react";
+import { LibHook } from "./LibHook";
+import { createMock, getMock } from "storybook-addon-module-mock";
+import * as message from "./message";
 
-const meta: ComponentMeta<typeof MockTest> = {
-  title: "Components/MockTest",
-  component: MockTest,
+const meta: ComponentMeta<typeof LibHook> = {
+  title: "Components/LibHook",
+  component: LibHook,
 };
 export default meta;
 
-export const Primary: ComponentStoryObj<typeof MockTest> = {
+export const Primary: ComponentStoryObj<typeof LibHook> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText("Before")).toBeInTheDocument();
   },
 };
 
-export const Mock: ComponentStoryObj<typeof MockTest> = {
+export const Mock: ComponentStoryObj<typeof LibHook> = {
   parameters: {
     moduleMock: {
       mock: () => {
-        const mock = createMock(React, "useMemo");
+        const mock = createMock(message, "getMessage");
         mock.mockReturnValue("After");
         return [mock];
       },
@@ -31,23 +31,23 @@ export const Mock: ComponentStoryObj<typeof MockTest> = {
   play: async ({ canvasElement, parameters }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText("After")).toBeInTheDocument();
-    const mock = getMock(parameters, React, "useMemo");
+    const mock = getMock(parameters, message, "getMessage");
     expect(mock).toBeCalled();
   },
 };
 
-export const Action: ComponentStoryObj<typeof MockTest> = {
+export const Action: ComponentStoryObj<typeof LibHook> = {
   parameters: {
     moduleMock: {
       mock: () => {
-        const mock = createMock(React, "useMemo");
+        const mock = createMock(message, "getMessage");
         return [mock];
       },
     },
   },
   play: async ({ canvasElement, parameters }) => {
     const canvas = within(canvasElement);
-    const mock = getMock(parameters, React, "useMemo");
+    const mock = getMock(parameters, message, "getMessage");
     mock.mockReturnValue("Action");
     userEvent.click(await canvas.findByRole("button"));
     await waitFor(() => {

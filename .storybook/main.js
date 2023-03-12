@@ -22,7 +22,7 @@ module.exports = {
     "storybook-addon-module-mock",
   ],
   features: {
-    //  storyStoreV7: true,
+    storyStoreV7: true,
     interactionsDebugger: true,
   },
   typescript: { reactDocgen: "react-docgen" },
