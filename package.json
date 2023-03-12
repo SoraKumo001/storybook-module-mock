@@ -2,15 +2,17 @@
   "scripts": {
     "test": "yarn storybook:build && npm-run-all -p -r storybook:start storybook:test",
     "sf": "scaffold create -t https://github.com/node-libraries/scaffold/tree/master/templates/storybook6",
-    "storybook": "start-storybook -p 9001",
+    "storybook": "rimraf node_modules/.cache && start-storybook -p 9001",
     "storybook:build": "build-storybook",
     "storybook:start": "http-server -s -p 9001 storybook-static",
     "storybook:test": "test-storybook --url http://localhost:9001 --coverage"
   },
   "dependencies": {
-    "next": "^13.2.3",
+    "axios": "^1.3.4",
+    "next": "^13.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rimraf": "^4.4.0"
   },
   "devDependencies": {
     "@node-libraries/scaffold": "^1.0.0",
@@ -23,13 +25,13 @@
     "@storybook/react": "^6.5.16",
     "@storybook/test-runner": "^0.9.4",
     "@storybook/testing-library": "^0.0.13",
-    "@types/node": "^18.14.6",
+    "@types/node": "^18.15.0",
     "@types/react": "^18.0.28",
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
-    "sass": "^1.58.3",
-    "storybook-addon-module-mock": "^0.0.2",
+    "sass": "^1.59.2",
+    "storybook-addon-module-mock": "^0.0.4",
     "storybook-addon-next": "^1.7.3",
     "typescript": "^4.9.5"
   },

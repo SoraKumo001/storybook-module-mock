@@ -1,5 +1,4 @@
-import React, { FC, useState } from "react";
-import { getMessage } from "./message";
+import React, { FC, useMemo, useState } from "react";
 
 interface Props {}
 
@@ -10,9 +9,12 @@ interface Props {}
  */
 export const MockTest: FC<Props> = ({}) => {
   const [, reload] = useState({});
+  const value = useMemo(() => {
+    return "Before";
+  }, []);
   return (
     <div>
-      <button onClick={() => reload({})}>{getMessage()}</button>
+      <button onClick={() => reload({})}>{value}</button>
     </div>
   );
 };
