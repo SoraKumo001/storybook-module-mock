@@ -10,7 +10,6 @@
     "lint:fix": "eslint --fix ./src"
   },
   "dependencies": {
-    "cross-fetch": "^3.1.5",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -26,10 +25,10 @@
     "@storybook/react": "^6.5.16",
     "@storybook/test-runner": "^0.9.4",
     "@storybook/testing-library": "^0.0.13",
-    "@types/node": "^18.15.0",
+    "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "eslint": "8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-import-resolver-typescript": "^3.5.3",
@@ -39,7 +38,7 @@
     "postcss": "^8.4.21",
     "rimraf": "^4.4.0",
     "sass": "^1.59.2",
-    "storybook-addon-module-mock": "^0.0.6",
+    "storybook-addon-module-mock": "^0.0.9",
     "storybook-addon-next": "^1.7.3",
     "typescript": "^4.9.5"
   },
