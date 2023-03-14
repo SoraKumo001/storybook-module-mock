@@ -11581,10 +11581,10 @@ store2@^2.12.0:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook-addon-module-mock@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/storybook-addon-module-mock/-/storybook-addon-module-mock-0.0.9.tgz#193c2a95e3b34f20de19ecd1da9121ebe1f40778"
-  integrity sha512-c08FLhCCSkAPfLSsbh9Oqa0AmBUOvpE//13LL6UVCfmLnHXjsgT3e/ZT+8TdXwGQpWfSnBLVddQUSaJjwjlA3w==
+storybook-addon-module-mock@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/storybook-addon-module-mock/-/storybook-addon-module-mock-1.0.0.tgz#8cdaac1ae960ef714bdb6f15899becd97f9c9d74"
+  integrity sha512-r6+d1OvscsqrS/9yl7q2C4/OSN3PrS1uWrBd3bogYg17j922/Aohg6xUa8E0LTiuaeOykARWrQ4Eyw1JcSqXOw==
 
 storybook-addon-next@^1.7.3:
   version "1.7.3"
