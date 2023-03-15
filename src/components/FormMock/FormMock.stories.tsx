@@ -36,7 +36,6 @@ export const Submit: ComponentStoryObj<typeof FormMock> = {
     userEvent.type(userInput, "User");
     userEvent.type(passwordInput, "Password");
     userEvent.click(await canvas.findByText("Submit"));
-    console.log(mock.mock.lastCall);
     expect(mock.mock.lastCall).toStrictEqual(["User", "Password"]);
   },
 };

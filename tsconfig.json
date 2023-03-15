@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES5",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,6 +16,11 @@
     "jsx": "preserve",
     "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "babel-plugins/plugin.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "babel-plugins/plugin.ts"
+  ],
   "exclude": ["node_modules"]
 }
