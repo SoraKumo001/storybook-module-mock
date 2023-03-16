@@ -1,13 +1,15 @@
 {
   "scripts": {
     "test": "yarn storybook:build && npm-run-all -p -r storybook:start storybook:test",
-    "sf": "scaffold create -t https://github.com/node-libraries/scaffold/tree/master/templates/storybook6",
     "storybook": "rimraf node_modules/.cache && start-storybook -p 9001",
     "storybook:build": "rimraf node_modules/.cache && build-storybook",
     "storybook:start": "http-server -s -p 9001 storybook-static",
     "storybook:test": "test-storybook --url http://localhost:9001 --coverage",
+    "sf": "scaffold create -t https://github.com/node-libraries/scaffold/tree/master/templates/storybook6",
     "lint": "eslint --fix ./src",
-    "lint:fix": "eslint --fix ./src"
+    "lint:fix": "eslint --fix ./src",
+    "link": "yarn link storybook-addon-module-mock",
+    "unlink": "yarn unlink storybook-addon-module-mock"
   },
   "dependencies": {
     "next": "^13.2.4",
@@ -38,7 +40,7 @@
     "postcss": "^8.4.21",
     "rimraf": "^4.4.0",
     "sass": "^1.59.3",
-    "storybook-addon-module-mock": "^1.0.2",
+    "storybook-addon-module-mock": "^1.0.5",
     "storybook-addon-next": "^1.7.3",
     "typescript": "^4.9.5"
   },
