@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { action1, action2 } from "./action";
-import styled from "./MockReset.module.scss";
 
 interface Props {}
 
