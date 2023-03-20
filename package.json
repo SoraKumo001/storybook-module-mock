@@ -40,7 +40,7 @@
     "postcss": "^8.4.21",
     "rimraf": "^4.4.0",
     "sass": "^1.59.3",
-    "storybook-addon-module-mock": "^1.0.6",
+    "storybook-addon-module-mock": "^1.0.7",
     "storybook-addon-next": "^1.7.3",
     "typescript": "^5.0.2"
   },

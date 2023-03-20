@@ -19,11 +19,21 @@ export const FormMock: FC<Props> = ({}) => {
       <form onSubmit={handleSubmit}>
         <label>
           User:
-          <input type="text" name="user" />
+          <input
+            type="text"
+            name="user"
+            data-testid="testid"
+            placeholder="User ID"
+          />
         </label>
         <label>
           Password:
-          <input type="password" name="password" />
+          <input
+            type="password"
+            name="password"
+            aria-label="password"
+            placeholder="Password"
+          />
         </label>
         <button type="submit">Submit</button>
       </form>
