@@ -2,9 +2,6 @@ name: Push
 permissions: write-all
 on:
   push:
-    branches:
-      - master
-
 jobs:
   CleanupRuns:
     runs-on: ubuntu-latest
@@ -44,9 +41,12 @@ jobs:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('yarn.lock') }}
           restore-keys: ${{ runner.OS }}-build-
-      - name: Build
-        run: yarn storybook:build
+      - name: Install playwright
+        run: npx playwright install chromium --with-deps
+      - name: Test
+        run: yarn test
       - name: Deploy
+        if: github.ref_name == 'master'
         run: |
           cd storybook-static
           git init
