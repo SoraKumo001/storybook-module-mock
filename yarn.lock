@@ -11663,10 +11663,10 @@ store2@^2.12.0:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook-addon-module-mock@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/storybook-addon-module-mock/-/storybook-addon-module-mock-1.0.11.tgz#b04ad121c1e89c0f7902d5b9ef3a0d3ee8246fcb"
-  integrity sha512-Ky2u4ENyBfx2mEZsKIPwLerrn8g25WkBHFhNqrWzBkZsHf3L2jNAsUrFfFAvJQnvKwJ4//DiA/sZG7dAK79yxg==
+storybook-addon-module-mock@1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/storybook-addon-module-mock/-/storybook-addon-module-mock-1.0.13.tgz#504aecaa07d85e65362a720708c3962bf254e15a"
+  integrity sha512-oOJJ6DIcFN1pl5jNrvkJfy0KGRzRY9CO5NyIZOGiaFDYRPY2zNqsET2OSzcv2AdQlY0053UWWFApdfMnH9yEYg==
   dependencies:
     react-json-tree "^0.18.0"
 
