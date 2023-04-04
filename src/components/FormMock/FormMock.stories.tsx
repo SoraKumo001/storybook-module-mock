@@ -1,11 +1,11 @@
 import { expect } from "@storybook/jest";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { userEvent, within } from "@storybook/testing-library";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { FormMock } from "./FormMock";
 import * as login from "./login";
 
-const meta: ComponentMeta<typeof FormMock> = {
+const meta: Meta<typeof FormMock> = {
   title: "Components/FormMock",
   component: FormMock,
   parameters: {
@@ -15,9 +15,9 @@ const meta: ComponentMeta<typeof FormMock> = {
 };
 export default meta;
 
-export const Primary: ComponentStoryObj<typeof FormMock> = {};
+export const Primary: StoryObj<typeof FormMock> = {};
 
-export const Submit: ComponentStoryObj<typeof FormMock> = {
+export const Submit: StoryObj<typeof FormMock> = {
   args: {},
   parameters: {
     moduleMock: {

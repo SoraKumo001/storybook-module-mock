@@ -1,10 +1,9 @@
-// @ts-check
-/**
- * @type { import("@storybook/react/types").StorybookConfig}
- */
-module.exports = {
-  core: {
-    builder: "webpack5",
+import type { StorybookConfig } from "@storybook/nextjs";
+
+const config: StorybookConfig = {
+  framework: {
+    name: "@storybook/nextjs",
+    options: {},
   },
   stories: ["../src/**/*.stories.@(tsx)"],
   addons: [
@@ -18,12 +17,14 @@ module.exports = {
         },
       },
     },
-    "storybook-addon-next",
     "storybook-addon-module-mock",
   ],
   features: {
     storyStoreV7: true,
-    interactionsDebugger: true,
   },
-  typescript: { reactDocgen: "react-docgen" },
+  typescript: {
+    reactDocgen: "react-docgen",
+  },
 };
+
+export default config;

@@ -1,24 +1,24 @@
 import { expect } from "@storybook/jest";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { userEvent, waitFor, within } from "@storybook/testing-library";
 import React from "react";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { MockTest } from "./MockTest";
 
-const meta: ComponentMeta<typeof MockTest> = {
+const meta: Meta<typeof MockTest> = {
   title: "Components/MockTest",
   component: MockTest,
 };
 export default meta;
 
-export const Primary: ComponentStoryObj<typeof MockTest> = {
+export const Primary: StoryObj<typeof MockTest> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText("Before")).toBeInTheDocument();
   },
 };
 
-export const Mock: ComponentStoryObj<typeof MockTest> = {
+export const Mock: StoryObj<typeof MockTest> = {
   parameters: {
     moduleMock: {
       mock: () => {
@@ -36,7 +36,7 @@ export const Mock: ComponentStoryObj<typeof MockTest> = {
   },
 };
 
-export const Action: ComponentStoryObj<typeof MockTest> = {
+export const Action: StoryObj<typeof MockTest> = {
   parameters: {
     moduleMock: {
       mock: () => {

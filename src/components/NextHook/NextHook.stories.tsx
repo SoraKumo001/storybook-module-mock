@@ -1,11 +1,11 @@
 import { expect } from "@storybook/jest";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { within } from "@storybook/testing-library";
 import * as link from "next/link";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { NextHook } from "./NextHook";
 
-const meta: ComponentMeta<typeof NextHook> = {
+const meta: Meta<typeof NextHook> = {
   title: "Components/NextHook",
   component: NextHook,
   parameters: {
@@ -15,9 +15,9 @@ const meta: ComponentMeta<typeof NextHook> = {
 };
 export default meta;
 
-export const Primary: ComponentStoryObj<typeof NextHook> = {};
+export const Primary: StoryObj<typeof NextHook> = {};
 
-export const Mock: ComponentStoryObj<typeof NextHook> = {
+export const Mock: StoryObj<typeof NextHook> = {
   parameters: {
     moduleMock: {
       mock: () => {

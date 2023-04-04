@@ -1,17 +1,17 @@
 import { expect } from "@storybook/jest";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { userEvent, waitFor, within } from "@storybook/testing-library";
 import { createMock, getMock, resetMock } from "storybook-addon-module-mock";
 import * as action from "./action";
 import { MockReset } from "./MockReset";
 
-const meta: ComponentMeta<typeof MockReset> = {
+const meta: Meta<typeof MockReset> = {
   title: "Components/MockReset",
   component: MockReset,
 };
 export default meta;
 
-export const Primary: ComponentStoryObj<typeof MockReset> = {
+export const Primary: StoryObj<typeof MockReset> = {
   parameters: {
     moduleMock: {
       mock: () => {
