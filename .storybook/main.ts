@@ -19,12 +19,6 @@ const config: StorybookConfig = {
     },
     "storybook-addon-module-mock",
   ],
-  features: {
-    storyStoreV7: true,
-  },
-  typescript: {
-    reactDocgen: "react-docgen",
-  },
 };
 
 export default config;
