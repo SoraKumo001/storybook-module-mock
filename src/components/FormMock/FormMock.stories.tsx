@@ -1,6 +1,6 @@
 import { expect } from "@storybook/jest";
 import { Meta, StoryObj } from "@storybook/react";
-import { userEvent, within } from "@storybook/testing-library";
+import { userEvent, waitFor, within } from "@storybook/testing-library";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { FormMock } from "./FormMock";
 import * as login from "./login";
@@ -33,9 +33,10 @@ export const Submit: StoryObj<typeof FormMock> = {
     const canvas = within(canvasElement);
     const userInput = await canvas.findByLabelText("User:");
     const passwordInput = await canvas.findByLabelText("Password:");
-    userEvent.type(userInput, "User");
-    userEvent.type(passwordInput, "Password");
-    userEvent.click(await canvas.findByText("Submit"));
+    await userEvent.type(userInput, "User");
+    await userEvent.type(passwordInput, "Password");
+    await userEvent.click(await canvas.findByText("Submit"));
+
     expect(mock.mock.lastCall).toStrictEqual(["User", "Password"]);
   },
 };
