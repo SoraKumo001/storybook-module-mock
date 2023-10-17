@@ -6,7 +6,6 @@ import { createMock, getMock } from "storybook-addon-module-mock";
 import { MockTest } from "./MockTest";
 
 const meta: Meta<typeof MockTest> = {
-  title: "Components/MockTest",
   component: MockTest,
 };
 export default meta;

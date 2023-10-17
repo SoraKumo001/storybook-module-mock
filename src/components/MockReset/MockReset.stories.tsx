@@ -6,7 +6,6 @@ import * as action from "./action";
 import { MockReset } from "./MockReset";
 
 const meta: Meta<typeof MockReset> = {
-  title: "Components/MockReset",
   component: MockReset,
 };
 export default meta;

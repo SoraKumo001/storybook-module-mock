@@ -6,7 +6,6 @@ import * as message from "./message";
 import { ReRender } from "./ReRender";
 
 const meta: Meta<typeof ReRender> = {
-  title: "Components/ReRender",
   component: ReRender,
 };
 export default meta;

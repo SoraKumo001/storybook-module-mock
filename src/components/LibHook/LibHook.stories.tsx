@@ -6,7 +6,6 @@ import { LibHook } from "./LibHook";
 import * as message from "./message";
 
 const meta: Meta<typeof LibHook> = {
-  title: "Components/LibHook",
   component: LibHook,
 };
 export default meta;

@@ -2,7 +2,7 @@
   "scripts": {
     "test": "yarn storybook:build && npm-run-all -p -r storybook:start storybook:test",
     "storybook": "rimraf node_modules/.cache && storybook dev -p 9001",
-    "storybook:build": "rimraf node_modules/.cache && storybook build",
+    "build-storybook": "rimraf node_modules/.cache && storybook build",
     "storybook:start": "http-server -s -p 9001 storybook-static",
     "storybook:test": "test-storybook --url http://127.0.0.1:9001 --coverage",
     "sf": "scaffold create -t https://github.com/node-libraries/scaffold/tree/master/templates/storybook6",
@@ -12,43 +12,45 @@
     "unlink": "yarn unlink storybook-addon-module-mock"
   },
   "dependencies": {
-    "next": "^13.4.19",
+    "next": "^13.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@node-libraries/scaffold": "^1.0.2",
     "@storybook/addon-coverage": "^0.0.9",
-    "@storybook/addon-essentials": "^7.3.2",
-    "@storybook/addon-interactions": "^7.3.2",
-    "@storybook/jest": "^0.2.1",
-    "@storybook/nextjs": "^7.3.2",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/jest": "0.2.3",
+    "@storybook/nextjs": "^7.4.6",
     "@storybook/test-runner": "^0.13.0",
-    "@storybook/testing-library": "^0.2.0",
-    "@types/node": "^20.5.1",
-    "@types/react": "^18.2.20",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "8.47.0",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^20.8.6",
+    "@types/react": "^18.2.28",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "8.51.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-storybook": "^0.6.13",
+    "eslint-plugin-storybook": "^0.6.15",
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.28",
-    "rimraf": "^5.0.1",
-    "sass": "^1.66.1",
-    "storybook": "^7.3.2",
-    "storybook-addon-module-mock": "1.0.15",
-    "typescript": "^5.1.6"
-  },
-  "resolutions": {
-    "jackspeak": "2.1.1"
+    "postcss": "^8.4.31",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.3",
+    "storybook": "^7.4.6",
+    "storybook-addon-module-mock": "^1.0.18",
+    "typescript": "^5.2.2"
   },
   "license": "MIT",
   "name": "storybook-module-mock",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "SoraKumo <info@croud.jp>"
+  "author": {
+    "name": "SoraKumo",
+    "email": "info@croud.jp"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "storybook-module-mock@1.0.0"
 }

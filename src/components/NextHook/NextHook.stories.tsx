@@ -6,7 +6,6 @@ import { createMock, getMock } from "storybook-addon-module-mock";
 import { NextHook } from "./NextHook";
 
 const meta: Meta<typeof NextHook> = {
-  title: "Components/NextHook",
   component: NextHook,
   parameters: {
     //  nextRouter: { asPath: '/' },
