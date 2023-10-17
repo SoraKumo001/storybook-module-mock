@@ -9,7 +9,7 @@ interface Props {}
  *
  * @param {Props} { }
  */
-export const ReRender: FC<Props> = ({}) => {
+export const Paths: FC<Props> = ({}) => {
   const value = getMessage();
   return <div>{value}</div>;
 };

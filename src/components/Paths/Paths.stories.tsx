@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { createMock } from "storybook-addon-module-mock";
-import { ReRender } from "./Paths";
+import { Paths } from "./Paths";
 // "@/*": ["./src/*"]
 import * as message from "@/components/Paths/message";
 
-const meta: Meta<typeof ReRender> = {
-  component: ReRender,
+const meta: Meta<typeof Paths> = {
+  component: Paths,
 };
 export default meta;
 
-export const Primary: StoryObj<typeof ReRender> = {};
+export const Primary: StoryObj<typeof Paths> = {};
 
-export const PathMock: StoryObj<typeof ReRender> = {
+export const PathMock: StoryObj<typeof Paths> = {
   parameters: {
     moduleMock: {
       mock: () => {
