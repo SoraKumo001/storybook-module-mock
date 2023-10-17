@@ -51,6 +51,7 @@
     "name": "SoraKumo",
     "email": "info@croud.jp"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "storybook-module-mock@1.0.0"
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  }
 }
