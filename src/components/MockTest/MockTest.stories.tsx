@@ -23,7 +23,9 @@ export const Mock: StoryObj<typeof MockTest> = {
       mock: () => {
         const mock = createMock(React, "useMemo");
         mock.mockImplementation((fn: () => unknown, deps: unknown[]) => {
+          // Call the original useMemo
           const value = getOriginal(mock)(fn, deps);
+          // Change the return value under certain conditions
           return value === "Before" ? "After" : value;
         });
         return [mock];
