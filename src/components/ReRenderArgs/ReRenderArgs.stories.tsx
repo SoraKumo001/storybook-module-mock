@@ -12,26 +12,31 @@ export default meta;
 
 export const Primary: StoryObj<typeof ReRenderArgs> = {
   args: {},
-  play: async ({ canvasElement, parameters }) => {
+  play: async ({ canvasElement, parameters, step }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText("Test")).toBeInTheDocument();
 
-    // Re-render with new props
-    render(parameters, { value: "Test2" });
-    await waitFor(() => {
-      expect(canvas.getByText("Test2")).toBeInTheDocument();
+    await step("first props", async () => {
+      expect(canvas.getByText("Test")).toBeInTheDocument();
     });
 
-    // Re-render with new props
-    render(parameters, { value: "Test3" });
-    await waitFor(() => {
-      expect(canvas.getByText("Test3")).toBeInTheDocument();
-    });
+    await step("Re-render with new props", async () => {
+      // Re-render with new props
+      render(parameters, { value: "Test2" });
+      await waitFor(() => {
+        expect(canvas.getByText("Test2")).toBeInTheDocument();
+      });
 
-    // Re-render with new props
-    render(parameters, { value: "Test4" });
-    await waitFor(() => {
-      expect(canvas.getByText("Test4")).toBeInTheDocument();
+      // Re-render with new props
+      render(parameters, { value: "Test3" });
+      await waitFor(() => {
+        expect(canvas.getByText("Test3")).toBeInTheDocument();
+      });
+
+      // Re-render with new props
+      render(parameters, { value: "Test4" });
+      await waitFor(() => {
+        expect(canvas.getByText("Test4")).toBeInTheDocument();
+      });
     });
   },
 };

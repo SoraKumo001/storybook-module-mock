@@ -7,9 +7,7 @@ import * as login from "./login";
 
 const meta: Meta<typeof FormMock> = {
   component: FormMock,
-  parameters: {
-    //  nextRouter: { asPath: '/' },
-  },
+  parameters: {},
   args: {},
 };
 export default meta;
