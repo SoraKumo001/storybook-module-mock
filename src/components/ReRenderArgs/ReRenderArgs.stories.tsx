@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, waitFor, within } from "@storybook/test";
 import { render } from "storybook-addon-module-mock";
 import { ReRenderArgs } from "./ReRenderArgs";
-import { expect, waitFor, within } from "@storybook/test";
 
 const meta: Meta<typeof ReRenderArgs> = {
   component: ReRenderArgs,

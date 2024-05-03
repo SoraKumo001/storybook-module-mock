@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import React from "react";
+import { expect, userEvent, waitFor, within } from "@storybook/test";
+import React, { DependencyList } from "react";
 import { createMock, getMock, getOriginal } from "storybook-addon-module-mock";
 import { MockTest } from "./MockTest";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
 
 const meta: Meta<typeof MockTest> = {
   component: MockTest,
@@ -21,7 +21,7 @@ export const Mock: StoryObj<typeof MockTest> = {
     moduleMock: {
       mock: () => {
         const mock = createMock(React, "useMemo");
-        mock.mockImplementation((fn: () => unknown, deps: unknown[]) => {
+        mock.mockImplementation((fn: () => unknown, deps: DependencyList) => {
           // Call the original useMemo
           const value = getOriginal(mock)(fn, deps);
           // Change the return value under certain conditions
@@ -53,7 +53,7 @@ export const Action: StoryObj<typeof MockTest> = {
   play: async ({ canvasElement, parameters }) => {
     const canvas = within(canvasElement);
     const mock = getMock(parameters, React, "useMemo");
-    mock.mockImplementation((fn: () => unknown, deps: unknown[]) => {
+    mock.mockImplementation((fn: () => unknown, deps: DependencyList) => {
       const value = getOriginal(mock)(fn, deps);
       return value === "Before" ? "Action" : value;
     });
