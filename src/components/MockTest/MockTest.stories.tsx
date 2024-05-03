@@ -1,9 +1,8 @@
-import { expect } from "@storybook/jest";
 import { Meta, StoryObj } from "@storybook/react";
-import { userEvent, waitFor, within } from "@storybook/testing-library";
 import React from "react";
 import { createMock, getMock, getOriginal } from "storybook-addon-module-mock";
 import { MockTest } from "./MockTest";
+import { expect, userEvent, waitFor, within } from "@storybook/test";
 
 const meta: Meta<typeof MockTest> = {
   component: MockTest,
