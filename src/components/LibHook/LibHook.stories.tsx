@@ -47,10 +47,10 @@ export const Action: StoryObj<typeof LibHook> = {
   play: async ({ canvasElement, parameters }) => {
     const canvas = within(canvasElement);
     const mock = getMock(parameters, message, "getMessage");
-    // mock.mockReturnValue("Action");
-    // userEvent.click(await canvas.findByRole("button"));
-    // await waitFor(() => {
-    //   expect(canvas.getByText("Action")).toBeInTheDocument();
-    // });
+    mock.mockReturnValue("Action");
+    userEvent.click(await canvas.findByRole("button"));
+    await waitFor(() => {
+      expect(canvas.getByText("Action")).toBeInTheDocument();
+    });
   },
 };

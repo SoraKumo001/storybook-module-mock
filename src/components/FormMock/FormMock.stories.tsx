@@ -4,6 +4,8 @@ import { createMock, getMock } from "storybook-addon-module-mock";
 import { FormMock } from "./FormMock";
 import * as login from "./login";
 
+console.log(login);
+
 const meta: Meta<typeof FormMock> = {
   component: FormMock,
   parameters: {},
