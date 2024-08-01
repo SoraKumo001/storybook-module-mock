@@ -28,6 +28,7 @@ export default tslint.config(
   },
   {
     rules: {
+      "@typescript-eslint/no-empty-object-type": 0,
       "@typescript-eslint/no-unused-vars": 0,
       "no-empty-pattern": 0,
       "no-empty": 0,
