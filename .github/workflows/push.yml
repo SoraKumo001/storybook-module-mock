@@ -30,7 +30,7 @@ jobs:
           lookup-only: true
       - name: Package install
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn -f
+        run: yarn
   StorybookBuild:
     name: Build
     needs: Modules

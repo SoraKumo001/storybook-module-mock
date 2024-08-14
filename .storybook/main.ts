@@ -28,8 +28,7 @@ const config: StorybookConfig = {
     {
       name: "storybook-addon-module-mock",
       options: {
-        include: [/login/, /message/, "**/action.*"],
-        exclude: ["**/node_modules/**"],
+        exclude: ["**/node_modules/@mui/**"],
       },
     },
   ],
