@@ -14,6 +14,7 @@ export default meta;
 export const Primary: StoryObj<typeof FormMock> = {};
 
 export const Submit: StoryObj<typeof FormMock> = {
+  tags: ["autodocs"],
   args: {},
   parameters: {
     moduleMock: {

@@ -4,6 +4,7 @@ import { MuiTest } from "./MuiTest";
 
 const meta: Meta<typeof MuiTest> = {
   component: MuiTest,
+  tags: ["autodocs"],
   args: {},
 };
 export default meta;

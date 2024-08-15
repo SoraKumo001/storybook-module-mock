@@ -5,6 +5,7 @@ import * as action from "./action";
 import { MockReset } from "./MockReset";
 
 const meta: Meta<typeof MockReset> = {
+  tags: ["autodocs"],
   component: MockReset,
 };
 export default meta;

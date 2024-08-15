@@ -1,10 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
+import { expect, waitFor, within } from "@storybook/test";
 import { createMock, getMock, render } from "storybook-addon-module-mock";
 import * as message from "./message";
 import { ReRender } from "./ReRender";
 
 const meta: Meta<typeof ReRender> = {
+  tags: ["autodocs"],
   component: ReRender,
 };
 export default meta;

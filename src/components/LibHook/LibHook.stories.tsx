@@ -5,6 +5,7 @@ import { LibHook } from "./LibHook";
 import * as message from "./message";
 
 const meta: Meta<typeof LibHook> = {
+  tags: ["autodocs"],
   component: LibHook,
 };
 export default meta;

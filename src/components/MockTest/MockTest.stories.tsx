@@ -5,6 +5,7 @@ import { createMock, getMock, getOriginal } from "storybook-addon-module-mock";
 import { MockTest } from "./MockTest";
 
 const meta: Meta<typeof MockTest> = {
+  tags: ["autodocs"],
   component: MockTest,
 };
 export default meta;

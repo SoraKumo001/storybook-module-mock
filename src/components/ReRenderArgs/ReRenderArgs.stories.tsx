@@ -4,6 +4,7 @@ import { render } from "storybook-addon-module-mock";
 import { ReRenderArgs } from "./ReRenderArgs";
 
 const meta: Meta<typeof ReRenderArgs> = {
+  tags: ["autodocs"],
   component: ReRenderArgs,
   args: { value: "Test" },
 };

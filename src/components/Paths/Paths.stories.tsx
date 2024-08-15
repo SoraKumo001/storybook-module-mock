@@ -5,6 +5,7 @@ import { Paths } from "./Paths";
 import * as message from "@/components/Paths/message";
 
 const meta: Meta<typeof Paths> = {
+  tags: ["autodocs"],
   component: Paths,
 };
 export default meta;
