@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "yarn storybook:build && npm-run-all -p -r storybook:start storybook:test",
+    "test": "pnpm run storybook:build && npm-run-all -p -r storybook:start storybook:test",
     "storybook": "rimraf node_modules/.cache && storybook dev -p 9001",
     "build-storybook": "storybook build",
     "storybook:build": "rimraf node_modules/.cache && storybook build",
