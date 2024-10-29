@@ -53,7 +53,7 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: ${{ runner.OS }}-build-
       - name: Install playwright
-        run: npx playwright install chromium --with-deps
+        run: pnpm exec playwright install  chromium --with-deps
       - name: Test
         run: pnpm run test
       - name: Deploy
