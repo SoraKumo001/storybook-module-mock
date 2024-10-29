@@ -16,21 +16,11 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
-      - name: Cache modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.OS }}-build-
-          lookup-only: true
-      - name: Package install
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: pnpm install
   StorybookBuild:
     name: Build
     needs: Modules
@@ -39,17 +29,11 @@ jobs:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - uses: actions/checkout@v4
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
-      - name: Cache modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.OS }}-build-
       - name: Install playwright
         run: npx playwright install chromium --with-deps
       - name: Test
