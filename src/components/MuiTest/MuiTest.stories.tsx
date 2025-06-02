@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+// import { expect, within } from "storybook/test";
 import { MuiTest } from "./MuiTest";
 
 const meta: Meta<typeof MuiTest> = {

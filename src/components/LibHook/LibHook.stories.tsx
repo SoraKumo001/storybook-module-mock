@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { LibHook } from "./LibHook";
 import * as message from "./message";

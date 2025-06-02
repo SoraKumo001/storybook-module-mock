@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, within } from "storybook/test";
 import { createMock, getMock } from "storybook-addon-module-mock";
 import { FormMock } from "./FormMock";
 import * as login from "./login";
